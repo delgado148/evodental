@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Funcionário</title>
+  <link rel="stylesheet" href="../evodental_V1/css/login.css">
+</head>
+<body>
+  <header>
+    EvoDental
+  </header>
+
+  <div class="container">
+    <div class="cartao">
+      <h2>Login</h2>
+      <form id="form-login">
+        <!-- E-mail -->
+        <div class="grupo-formulario">
+          <label for="email-login">E-mail Corporativo</label>
+          <input type="email" id="email-login" name="email-login" placeholder="nome@evodental.com" required>
+        </div>
+
+        <!-- Senha -->
+        <div class="grupo-formulario">
+          <label for="senha-login">Senha</label>
+          <div class="envoltura-senha">
+            <input type="password" id="senha-login" name="senha-login" minlength="6" maxlength="20" required>
+            <span class="alternar-senha" onclick="alternarSenha('senha-login', 'icone-olho-login')">
+              <img id="icone-olho-login" src="../evodental_V1/imagens/olho.png" alt="Mostrar senha">
+            </span>
+          </div>
+        </div>
+
+        <button type="submit">Entrar</button>
+
+        <!-- Link para cadastro -->
+        <p class="link-entrar">
+          Não tem um cadastro? <a href="cadastro.html">Cadastrar-se</a>
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 - EvoDental | Todos os direitos reservados
+  </footer>
+
+  <script>
+    const olhoAberto = "../evodental_V1/imagens/olhofe.png";
+    const olhoFechado = "../evodental_V1/imagens/olho.png";
+
+    function alternarSenha(idCampo, idIcone) {
+      const campo = document.getElementById(idCampo);
+      const icone = document.getElementById(idIcone);
+
+      if (campo.type === "password") {
+        campo.type = "text";
+        icone.src = olhoAberto;
+        icone.alt = "Ocultar senha";
+      } else {
+        campo.type = "password";
+        icone.src = olhoFechado;
+        icone.alt = "Mostrar senha";
+      }
+    }
+
+    // Redirecionamento ao clicar em Entrar
+    const formLogin = document.getElementById("form-login");
+    formLogin.addEventListener("submit", function(e) {
+      e.preventDefault(); // evita submit padrão
+      // Aqui você pode validar o login com JS ou backend
+      window.location.href = "home.html"; // redireciona
+    });
+  </script>
+</body>
+</html>

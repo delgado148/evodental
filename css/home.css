@@ -1,0 +1,108 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Corpo da página */
+body {
+  background-color: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  background-color: #65beee;
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+/* Links à esquerda */
+.header-esquerda a {
+  color: white;
+  margin-right: 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.header-esquerda a:hover {
+  text-decoration: underline;
+}
+
+/* EvoDental centralizado */
+.header-centro {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/* Conteúdo principal */
+.conteudo {
+  flex: 1;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Grid de cards */
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Card individual */
+.card-home {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  height: 180px;
+}
+
+.card-home img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+.card-home p {
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+/* Efeito hover */
+.card-home:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Footer */
+footer {
+  margin-top: auto;
+  background-color: #65beee;
+  color: white;
+  text-align: center;
+  padding: 35px;
+  font-size: 0.9em;
+}

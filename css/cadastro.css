@@ -1,0 +1,143 @@
+/* Reset e tipografia */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header e Footer */
+header {
+  background-color: #65beee;
+  color: white;
+  padding: 40px;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+footer {
+  margin-top: auto;
+  background-color: #65beee;
+  color: white;
+  text-align: center;
+  padding: 35px;
+  font-size: 0.9em;
+}
+
+/* Container centralizado */
+.container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Cartão do formulário */
+.cartao {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 600px;
+}
+
+.cartao h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Grupo de formulário */
+.grupo-formulario {
+  margin-bottom: 15px;
+}
+
+.grupo-formulario label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #444;
+}
+
+.grupo-formulario input,
+.grupo-formulario select,
+.grupo-formulario textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+textarea {
+  resize: none;
+}
+
+/* Botão */
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #ffffff;
+  color: #272626;
+  font-size: 1em;
+  border: solid #c58af5;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #c58af5;
+  color: white;
+}
+
+/* Campo senha com ícone */
+.envoltura-senha {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.envoltura-senha input {
+  width: 100%;
+  padding-right: 40px;
+}
+
+.alternar-senha {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  user-select: none;
+  width: 24px;
+  height: 24px;
+}
+
+.alternar-senha img {
+  width: 100%;
+  height: auto;
+}
+
+/* Link para entrar */
+.link-entrar {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 0.95em;
+}
+
+.link-entrar a {
+  color: #3b82f6; /* azul */
+  text-decoration: none;
+}
+
+.link-entrar a:hover {
+  text-decoration: underline;
+}
