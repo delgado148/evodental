@@ -43,53 +43,54 @@ header {
   font-weight: 700;
 }
 
-/* Container central */
-.container {
+/* Conteúdo */
+.conteudo {
   flex: 1;
   display: flex;
   justify-content: center;
-  padding: 36px 20px;
+  align-items: flex-start;
+  padding: 40px 20px;
 }
 
-.cartao {
-  background-color: #fff;
-  padding: 28px;
-  border-radius: 14px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-  width: 100%;
+/* Grid dos cards */
+.grid-cards-financeiro {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
   max-width: 1100px;
-  overflow-x: auto;
-}
-
-.cartao h2 {
-  color: #065b85;
-  margin-bottom: 18px;
-  text-align: center;
-}
-
-/* Tabela */
-table {
   width: 100%;
-  border-collapse: collapse;
 }
 
-thead {
-  background-color: #65beee;
-  color: white;
+/* Card financeiro */
+.card-financeiro {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-th, td {
-  padding: 12px 10px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
+.card-financeiro:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 }
 
-tbody tr:hover {
-  background-color: #d0ebff; /* hover mais suave */
-}
-
-tfoot td {
+.card-financeiro .descricao {
   font-weight: bold;
+  margin-bottom: 10px;
+  color: #065b85;
+}
+
+.card-financeiro .valor {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #0077cc;
+}
+
+.card-financeiro .data {
+  font-size: 0.9rem;
+  color: #555;
 }
 
 /* Footer */
@@ -104,9 +105,15 @@ footer {
 
 /* Responsividade */
 @media (max-width: 900px) {
-  th, td { padding: 10px 8px; font-size: 0.9rem; }
+  .grid-cards-financeiro {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
 }
 
 @media (max-width: 600px) {
-  .titulo-header { font-size: 1.1rem; }
+  .grid-cards-financeiro {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
 }
