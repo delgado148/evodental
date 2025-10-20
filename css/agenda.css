@@ -1,0 +1,132 @@
+/* Mantém o mesmo estilo base das outras telas */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f3f3;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #ff7b00;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+}
+
+header .menu-esquerda a {
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+header .menu-esquerda a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 40px 0;
+}
+
+.cartao {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 900px;
+  text-align: center;
+}
+
+.cartao h2 {
+  color: #ff7b00;
+  margin-bottom: 25px;
+}
+
+.calendario {
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 25px;
+}
+
+.mes {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.dias-semana,
+.dias {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.dias-semana span {
+  font-weight: bold;
+  color: #555;
+}
+
+.dias span {
+  background-color: #fff;
+  padding: 15px 0;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.dias span:hover {
+  background-color: #ffe4c4;
+}
+
+.dias .fora {
+  opacity: 0.3;
+}
+
+.dias .evento {
+  background-color: #ffb566;
+  color: white;
+  font-weight: bold;
+}
+
+.eventos {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.eventos h3 {
+  color: #ff7b00;
+  margin-bottom: 10px;
+}
+
+.eventos ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.eventos li {
+  background-color: #fef4ea;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+footer {
+  background-color: #ff7b00;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
