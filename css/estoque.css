@@ -1,0 +1,113 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  background-color: #65beee;
+  color: white;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.menu-esquerda a {
+  color: white;
+  margin-right: 14px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.menu-esquerda a:hover {
+  text-decoration: underline;
+}
+
+.titulo-header {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+/* Conteúdo */
+.conteudo {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+}
+
+/* Grid de cards */
+.grid-cards-estoque {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Card de estoque */
+.card-estoque {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-estoque:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.card-estoque .produto {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #065b85;
+}
+
+.card-estoque .quantidade {
+  font-size: 1rem;
+  color: #0077cc;
+}
+
+/* Footer */
+footer {
+  margin-top: auto;
+  background-color: #65beee;
+  color: white;
+  text-align: center;
+  padding: 26px 12px;
+  font-size: 0.9rem;
+}
+
+/* Responsividade */
+@media (max-width: 1000px) {
+  .grid-cards-estoque {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-cards-estoque {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
