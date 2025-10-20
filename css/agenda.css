@@ -1,3 +1,5 @@
+/* agenda.css — compatível com o HTML fornecido (container, cartao, calendario, dias-semana, dias, eventos) */
+
 /* Reset básico */
 * {
   margin: 0;
@@ -14,111 +16,166 @@ body {
   min-height: 100vh;
 }
 
-/* Header */
+/* Header (compatível com .menu-esquerda e .titulo-header) */
 header {
   background-color: #65beee;
   color: white;
-  padding: 20px 40px;
+  padding: 18px 24px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   position: relative;
 }
 
-/* Links à esquerda */
-.header-esquerda a {
+/* Links à esquerda (seu HTML usa .menu-esquerda) */
+.menu-esquerda a {
   color: white;
-  margin-right: 15px;
+  margin-right: 14px;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
 }
 
-.header-esquerda a:hover {
+.menu-esquerda a:hover {
   text-decoration: underline;
 }
 
-/* EvoDental centralizado */
-.header-centro {
+/* Título central do header (seu HTML usa .titulo-header) */
+.titulo-header {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 1.5em;
-  font-weight: bold;
+  font-size: 1.4rem;
+  font-weight: 700;
 }
 
-/* Conteúdo principal */
-main {
+/* Container central */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 36px 20px;
   flex: 1;
-  padding: 40px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
-/* Título da agenda */
-h2 {
-  color: #065b85;
-  margin-bottom: 20px;
-  font-size: 1.8em;
+/* Cartão principal (seu HTML usa .cartao) */
+.cartao {
+  background-color: #fff;
+  padding: 28px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  width: 100%;
+  max-width: 980px;
 }
 
-/* Container do calendário */
-.calendario {
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  padding: 30px;
-  width: 90%;
-  max-width: 900px;
-}
-
-/* Cabeçalho do calendário */
-.calendario-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 25px;
-}
-
-.calendario-header h3 {
-  color: #065b85;
-  font-size: 1.4em;
-}
-
-/* Grade dos dias */
-.grade-dias {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 10px;
+/* Título do card */
+.cartao h2 {
+  color: #065b85; /* azul escuro para contraste */
+  margin-bottom: 18px;
   text-align: center;
 }
 
-.dia-semana {
-  font-weight: bold;
+/* Calendário principal (.calendario do seu HTML) */
+.calendario {
+  background-color: #f9fbfd;
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 20px;
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.02);
+}
+
+/* Mês */
+.calendario .mes {
+  text-align: center;
+  font-weight: 700;
+  color: #065b85;
+  margin-bottom: 12px;
+}
+
+/* Cabeçalho dias da semana (.dias-semana) */
+.dias-semana {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.dias-semana span {
+  font-weight: 700;
+  color: #065b85;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+/* Grid de dias (.dias) */
+.dias {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+
+.dias span {
+  background-color: #ffffff;
+  padding: 12px 8px;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.04);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.12s ease, background-color 0.12s ease, color 0.12s;
+}
+
+/* Dias que pertencem a outro mês */
+.dias .fora {
+  opacity: 0.35;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+/* Hover nos dias */
+.dias span:hover {
+  transform: translateY(-4px);
+  background-color: #e6f7ff;
+}
+
+/* Dia que possui evento (classe .evento só no dia) */
+.dias .evento {
+  background-color: #65beee;
+  color: #fff;
+  font-weight: 700;
+}
+
+/* Lista de eventos/consultas (.eventos) */
+.eventos {
+  margin-top: 18px;
+  text-align: left;
+}
+
+.eventos h3 {
+  color: #065b85;
+  margin-bottom: 10px;
+}
+
+.eventos ul {
+  list-style: none;
+  padding: 0;
+}
+
+.eventos li {
+  background-color: #f7fbff;
+  border-left: 4px solid rgba(101,190,238,0.9);
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+
+.eventos li strong {
   color: #065b85;
 }
 
-.dia {
-  background-color: #e7f6ff;
-  border-radius: 8px;
-  padding: 15px 0;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.dia:hover {
-  background-color: #65beee;
-  color: white;
-}
-
-/* Eventos / Consultas */
-.evento {
-  background-color: #65beee;
-  color: white;
-  border-radius: 6px;
-  padding: 5px;
-  font-size: 0.9em;
-  margin-top: 5px;
+.eventos li em {
+  color: #333;
+  font-style: normal;
+  opacity: 0.9;
 }
 
 /* Footer */
@@ -127,6 +184,18 @@ footer {
   background-color: #65beee;
   color: white;
   text-align: center;
-  padding: 30px;
-  font-size: 0.9em;
+  padding: 26px 12px;
+  font-size: 0.9rem;
+}
+
+/* Responsividade simples */
+@media (max-width: 900px) {
+  .dias, .dias-semana { gap: 6px; }
+  .dias span { padding: 10px 6px; }
+  .cartao { padding: 20px; }
+}
+
+@media (max-width: 600px) {
+  .dias, .dias-semana { grid-template-columns: repeat(7, 1fr); font-size: 0.85rem; }
+  .titulo-header { font-size: 1.1rem; left: 50%; }
 }
