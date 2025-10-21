@@ -9,30 +9,84 @@
 <body>
   <header>
     <div class="menu-esquerda">
-      <a href="home.html">Home</a>
       <a href="login.html">Entrar</a>
       <a href="cadastro.html">Cadastrar</a>
     </div>
-    <div class="titulo-header">
-      <a href="home.html">EvoDental</a>
-    </div>
+    <div class="titulo-header">EvoDental</div>
   </header>
 
   <div class="conteudo">
-    <h2>Configurações do Sistema</h2>
-    <div class="grid-config">
+    <div class="config-container">
+      
+      <!-- Perfil -->
       <div class="card-config">
-        <p>Alterar Senha</p>
+        <img src="../evodental/imagens/perfil.png" alt="Perfil">
+        <h3>Perfil</h3>
+        <form>
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" placeholder="Rafael Delgado">
+          
+          <label for="email">E-mail</label>
+          <input type="email" id="email" placeholder="nome@evodental.com">
+
+          <button type="submit">Salvar Perfil</button>
+        </form>
       </div>
+
+      <!-- Alterar Senha -->
       <div class="card-config">
-        <p>Preferências</p>
+        <img src="../evodental/imagens/senha.png" alt="Senha">
+        <h3>Senha</h3>
+        <form>
+          <label for="senha-atual">Senha Atual</label>
+          <input type="password" id="senha-atual" placeholder="********">
+
+          <label for="nova-senha">Nova Senha</label>
+          <input type="password" id="nova-senha" placeholder="********">
+
+          <label for="confirmar-senha">Confirmar Senha</label>
+          <input type="password" id="confirmar-senha" placeholder="********">
+
+          <button type="submit">Alterar Senha</button>
+        </form>
       </div>
+
+      <!-- Preferências -->
       <div class="card-config">
-        <p>Notificações</p>
+        <img src="../evodental/imagens/config.png" alt="Configurações">
+        <h3>Preferências</h3>
+        <form>
+          <label for="tema">Tema do Sistema</label>
+          <select id="tema">
+            <option value="claro">Claro</option>
+            <option value="escuro">Escuro</option>
+          </select>
+
+          <label for="notificacoes">Notificações</label>
+          <select id="notificacoes">
+            <option value="ativadas">Ativadas</option>
+            <option value="desativadas">Desativadas</option>
+          </select>
+
+          <button type="submit">Salvar Preferências</button>
+        </form>
       </div>
+
+      <!-- Informações da Conta -->
       <div class="card-config">
-        <p>Segurança</p>
+        <img src="../evodental/imagens/info.png" alt="Informações">
+        <h3>Informações</h3>
+        <form>
+          <label for="cargo">Cargo</label>
+          <input type="text" id="cargo" placeholder="Dentista">
+
+          <label for="setor">Setor</label>
+          <input type="text" id="setor" placeholder="Atendimento">
+
+          <button type="submit">Atualizar Informações</button>
+        </form>
       </div>
+
     </div>
   </div>
 
