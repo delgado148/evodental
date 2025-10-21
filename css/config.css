@@ -1,0 +1,127 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #65beee;
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.menu-esquerda a {
+  color: white;
+  margin-right: 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu-esquerda a:hover {
+  text-decoration: underline;
+}
+
+.titulo-header {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.conteudo {
+  flex: 1;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.config-container {
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.card-config {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 280px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-config img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.card-config h3 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.card-config form {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-config label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #444;
+  text-align: left;
+}
+
+.card-config input,
+.card-config select {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+.card-config button {
+  padding: 12px;
+  background-color: #ffffff;
+  color: #272626;
+  font-size: 1em;
+  border: solid #65beee;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.card-config button:hover {
+  background-color: #65beee;
+  color: white;
+  font-weight: bold;
+}
+
+footer {
+  margin-top: auto;
+  background-color: #65beee;
+  color: white;
+  text-align: center;
+  padding: 35px;
+  font-size: 0.9em;
+}
