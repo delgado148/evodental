@@ -94,5 +94,24 @@
   <footer>
     &copy; 2025 - EvoDental | Todos os direitos reservados
   </footer>
+
+  <script>
+  const selectTema = document.getElementById("tema");
+
+  // Verifica se já existe tema salvo no navegador
+  const temaSalvo = localStorage.getItem("tema");
+  if (temaSalvo) {
+    document.body.classList.toggle("escuro", temaSalvo === "escuro");
+    selectTema.value = temaSalvo;
+  }
+
+  // Muda o tema quando o usuário seleciona
+  selectTema.addEventListener("change", function() {
+    const modo = this.value;
+    document.body.classList.toggle("escuro", modo === "escuro");
+    localStorage.setItem("tema", modo); // salva a preferência
+  });
+</script>
+
 </body>
 </html>

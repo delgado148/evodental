@@ -125,3 +125,25 @@ footer {
   padding: 35px;
   font-size: 0.9em;
 }
+
+body.escuro {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+body.escuro .card-config {
+  background: #1e1e1e;
+  color: #f0f0f0;
+  box-shadow: 0 2px 6px rgba(255,255,255,0.1);
+}
+
+body.escuro header,
+body.escuro footer {
+  background-color: #222;
+  color: #eee;
+}
+
+body.escuro button {
+  background: #ff7f32;
+  color: #fff;
+}
