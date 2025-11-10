@@ -139,11 +139,11 @@ body.escuro .card-config {
 
 body.escuro header,
 body.escuro footer {
-  background-color: #222;
+  background-color: #65beee;
   color: #eee;
 }
 
 body.escuro button {
-  background: #ff7f32;
+  background: #65beee;
   color: #fff;
 }
