@@ -52,48 +52,25 @@ header {
   padding: 40px 20px;
 }
 
-/* Grid de cards */
-.grid-cards-relatorios {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
-  max-width: 1200px;
-  width: 100%;
-}
-
-/* Card individual */
-.card-relatorio {
+/* Article do detalhe */
+.relatorio-detalhe {
   background-color: white;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  padding: 20px;
-  text-align: center;
-  transition: transform 0.2s, box-shadow 0.2s;
-  cursor: pointer;
-  text-decoration: none;
+  padding: 40px;
+  max-width: 800px;
+  width: 100%;
 }
 
-.card-relatorio:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-}
-
-.card-relatorio img {
-  width: 60px;
-  height: 60px;
+.relatorio-detalhe h2 {
+  color: #065b85;
   margin-bottom: 15px;
 }
 
-.card-relatorio .titulo-relatorio {
-  font-weight: bold;
-  font-size: 1.1rem;
-  color: #065b85;
-  margin-bottom: 8px;
-}
-
-.card-relatorio .descricao {
-  font-size: 0.9rem;
+.relatorio-detalhe p {
   color: #0077cc;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 /* Footer */
@@ -104,19 +81,4 @@ footer {
   text-align: center;
   padding: 26px 12px;
   font-size: 0.9rem;
-}
-
-/* Responsividade */
-@media (max-width: 1000px) {
-  .grid-cards-relatorios {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-}
-
-@media (max-width: 600px) {
-  .grid-cards-relatorios {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
 }
